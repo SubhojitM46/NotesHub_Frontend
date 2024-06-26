@@ -22,8 +22,8 @@ function SignUp() {
             password:data.password
         }
         setSpinner(true)
-        //await axios.post('https://bookstore-backend-v5wi.onrender.com/user/signup',userInfo)
-         await axios.post('http://localhost:4001/user/signup',userInfo)
+        await axios.post('https://noteshub-backend-9.onrender.com/user/signup',userInfo)
+        // await axios.post('http://localhost:4001/user/signup',userInfo)
         .then(res => {
             // console.log(res.data);
             setSpinner(false)

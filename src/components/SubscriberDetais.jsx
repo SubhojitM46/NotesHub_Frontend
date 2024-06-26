@@ -8,8 +8,8 @@ function SubscriberDetais() {
     // get subscriber api intregation
     const getSubscribers= async()=>{
         try{
-         const subscribers= await axios.get('http://localhost:4001/subscribe/user')
-            //const subscribers= await axios.get('https://bookstore-backend-v5wi.onrender.com/subscribe/user')
+        // const subscribers= await axios.get('http://localhost:4001/subscribe/user')
+            const subscribers= await axios.get('https://noteshub-backend-9.onrender.com/subscribe/user')
             .then(res=>{
                 console.log(res);
                 setData(res.data);

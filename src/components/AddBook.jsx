@@ -26,8 +26,8 @@ function AddBook() {
         console.log(bookInfo);
         setSpinner(true)
         try{
-             const bookRes= await axios.post('http://localhost:4001/book/addBook',bookInfo)
-            //const bookRes= await axios.post('https://bookstore-backend-v5wi.onrender.com/book/addBook',bookInfo)
+             //const bookRes= await axios.post('http://localhost:4001/book/addBook',bookInfo)
+            const bookRes= await axios.post('https://noteshub-backend-9.onrender.com//book/addBook',bookInfo)
         .then(res=>{
             
                 setSpinner(false);
