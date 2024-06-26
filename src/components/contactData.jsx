@@ -10,7 +10,7 @@ function ContactData() {
     const getcontactDetails= async()=>{
         try{
              //const subscribers= await axios.get('http://localhost:4001/contact/contactDetails')
-            const subscribers= await axios.get('https://noteshub-backend-9.onrender.com//contact/contactDetails')
+            const subscribers= await axios.get('https://noteshub-backend-9.onrender.com/contact/contactDetails')
             .then(res=>{
                 console.log(res);
                 setData(res.data);
