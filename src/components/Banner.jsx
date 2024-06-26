@@ -42,7 +42,7 @@ function Banner() {
             const res = await axios.post('https://noteshub-backend-9.onrender.com/subscribe/user', data)
                 .then(res => {
                     // console.log(res);
-                    toast.success('Thanks to subscribe the newsLetter');
+                    toast.success('Thanks to subscribe the NotesHub');
                     window.localStorage.setItem('subscribed', JSON.stringify(res.data.subscriber.email));
                     setSpinner(false)
                     document.getElementById('newsLetterEmail').value = ''
