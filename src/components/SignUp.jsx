@@ -69,7 +69,7 @@ function SignUp() {
                             </div>
                             <div className='px-1'>
                                 <label htmlFor='lname'>Last Name:</label>
-                                <input {...register("lname", { required: true })} type="text" placeholder='Enater your last name' className="focus:border-green-500 w-full bg-transparent p-2 outline-none border rounded my-4" id='lname' />
+                                <input {...register("lname", { required: true })} type="text" placeholder='Enter your last name' className="focus:border-green-500 w-full bg-transparent p-2 outline-none border rounded my-4" id='lname' />
                                 {errors.lname && <span className='block text-red-500 mt-[-10px] mb-5'>This field is required</span>}
                             </div>
                         </div>
