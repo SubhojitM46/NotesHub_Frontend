@@ -25,7 +25,7 @@ function Delete({setReloadBook}) {
         setSpinner(true);
         try{
              //const deleteBook= await axios.delete(`http://localhost:4001/book/deleteBook/${BookId}`)
-            const deleteBook= await axios.delete(`https://noteshub-backend-9.onrender.com//book/deleteBook/${BookId}`)
+            const deleteBook= await axios.delete(`https://noteshub-backend-9.onrender.com/book/deleteBook/${BookId}`)
             .then(res=>{
                     if (!res.data.deleteBook.deletedCount) {
                     toast.error("This book has been already deleted! Please reload the page");
