@@ -18,8 +18,8 @@ function Contact() {
     // addConatact api intregation
     setSpinner(true)
     try{
-      //const saveContact = await axios.post('https://bookstore-backend-v5wi.onrender.com/contact/contactDetails',data)
-      const saveContact = await axios.post('http://localhost:4001/contact/contactDetails',data)
+      const saveContact = await axios.post('https://noteshub-backend-9.onrender.com/contact/contactDetails',data)
+      //const saveContact = await axios.post('http://localhost:4001/contact/contactDetails',data)
       .then(res=>{
         console.log(res);
         setSpinner(false)
