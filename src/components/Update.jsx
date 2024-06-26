@@ -34,8 +34,8 @@ function Update({setReloadBook}) {
         }
         setSpinner(true)
         try {
-            const updateBook = await axios.put(`https://bookstore-backend-v5wi.onrender.com/book/update/${BookId}`,updateDetails)
-            // const updateBook = await axios.put(`http://localhost:4001/book/update/${BookId}`,updateDetails)
+            //const updateBook = await axios.put(`https://bookstore-backend-v5wi.onrender.com/book/update/${BookId}`,updateDetails)
+             const updateBook = await axios.put(`http://localhost:4001/book/update/${BookId}`,updateDetails)
             console.log(updateBook)
             if(updateBook.data!=null){
                 toast.success('Book updated successfully');

@@ -69,7 +69,7 @@ const navbar = () => {
             {authUser?
                 (authUser.email=='admin@gmail.com')?
 
-                    <li className='bg-red-500 text-white rounded-md'><Link to='/admin'>Admin</Link></li>
+                    <li className='bg-red-500 text-white rounded-md '><Link to='/admin'>Admin</Link></li>
                 :
                 '':''
             }
@@ -90,7 +90,7 @@ const navbar = () => {
                                 {navItems}
                             </ul>
                         </div>
-                        <Link to={'/'} className=" text-2xl font-bold cursor-pointer">BookStore</Link>
+                        <Link to={'/'} className=" text-2xl font-bold cursor-pointer">NotesHub</Link>
                     </div>
                     <div className="navbar-end space-x-3">
 

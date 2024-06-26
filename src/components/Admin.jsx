@@ -12,7 +12,7 @@ function Admin() {
             <h1 className='font-bold text-2xl  md:text-4xl text-center mb-24'>Admin<span className='text-pink-500'>Portal</span></h1>
             <button onClick={() => document.getElementById('my_modal_5').showModal()} className=' w-full rounded-2xl my-5 btn btn-secondary text-xl md:w-1/3 shadow-md shadow-pink-300 '>Add Book</button>
             <AddBook />
-            <button onClick={() => document.getElementById('my_modal_6').showModal()} className=' w-full rounded-2xl my-5 btn btn-secondary text-xl md:w-1/3 shadow-md shadow-pink-300  '>Newsletter Subscribers</button>
+            <button onClick={() => document.getElementById('my_modal_6').showModal()} className=' w-full rounded-2xl my-5 btn btn-secondary text-xl md:w-1/3 shadow-md shadow-pink-300  '>Subscribers</button>
             <SubscriberDetais />
             <button onClick={() => document.getElementById('my_modal_7').showModal()} className=' w-full rounded-2xl my-5 btn btn-secondary text-xl md:w-1/3 shadow-md shadow-pink-300 '>whom try to contact me</button>
             <ContactData />

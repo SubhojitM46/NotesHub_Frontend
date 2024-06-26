@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
-// import banner from '../../public/Banner.png'
+ //import baanner from "../assets/baanner.png"
+ import baner from "../assets/Baner.png"
 // import banner from 'https://w7.pngwing.com/pngs/535/280/png-transparent-bookselling-bookshop-store-material-bookshop-area.png'
-const banner = 'https://cdn2.iconfinder.com/data/icons/nuts-4/50/40-512.png'
+//const banner = 'https://cdn2.iconfinder.com/data/icons/nuts-4/50/40-512.png'
 
 
 
@@ -37,10 +38,10 @@ function Banner() {
         try {
 
 
-            // const res = await axios.post('http://localhost:4001/subscribe/user', data)
-            const res = await axios.post('https://bookstore-backend-v5wi.onrender.com/subscribe/user', data)
+             const res = await axios.post('http://localhost:4001/subscribe/user', data)
+            //const res = await axios.post('https://bookstore-backend-v5wi.onrender.com/subscribe/user', data)
                 .then(res => {
-                    // console.log(res.data);
+                    // console.log(res);
                     toast.success('Thanks to subscribe the newsLetter');
                     window.localStorage.setItem('subscribed', JSON.stringify(res.data.subscriber.email));
                     setSpinner(false)
@@ -77,8 +78,14 @@ function Banner() {
                 <div className='w-full md:w-1/2 mt-0 md:mt-30 order-2  md:order-1' >
                     <div className='space-y-12'>
 
-                        <h1 className='text-4xl font-bold mt-20' id='hero-txt'>Hello, welcome here to learn something <span className='text-pink-500'>new everyday!!!</span></h1>
-                        <p className='text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto eveniet labore enim perspiciatis quibusdam, corrupti voluptates vel quisquam error, iusto autem possimus nesciunt
+                        <h1 className='text-4xl font-bold mt-20' id='hero-txt'>Hello, welcome to NotesHub, learn something <span className='text-pink-500'>new everyday!!!</span></h1>
+                        <p className='text-xl'> NotesHub is your go-to solution for downloading all your important notes in one place. Access and download your notes anytime, anywhere. Stay organized and efficient with NotesHub – start downloading today!
+
+
+
+
+
+
                         </p>
                         <form id='newsLetterForm' onSubmit={subscribed}>
 
@@ -101,7 +108,7 @@ function Banner() {
 
                 </div>
                 <div className='w-full md:w-1/2  order-1 md:order-2 mt-20 md:mt-0 flex '>
-                    <img src={banner} className='h-92 w-92 md:pl-28 pl-0  ' alt="" />
+                    <img src={baner} className='h-92 w-92 md:pl-28 pl-0  ' alt="" />
                 </div>
             </div>
         </>

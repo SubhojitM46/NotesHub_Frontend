@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthProvider';
 import toast from 'react-hot-toast';
 import axios from 'axios';
@@ -20,13 +20,14 @@ function AddBook() {
             price:data.bPrice,
             title:data.title,
             category:data.category,
-            image:data.imgLink
+            image:data.imgLink,
+            url:data.urlLink
         }
         console.log(bookInfo);
         setSpinner(true)
         try{
-            // const bookRes= await axios.post('http://localhost:4001/book/addBook',bookInfo)
-            const bookRes= await axios.post('https://bookstore-backend-v5wi.onrender.com/book/addBook',bookInfo)
+             const bookRes= await axios.post('http://localhost:4001/book/addBook',bookInfo)
+            //const bookRes= await axios.post('https://bookstore-backend-v5wi.onrender.com/book/addBook',bookInfo)
         .then(res=>{
             
                 setSpinner(false);
@@ -73,7 +74,7 @@ function AddBook() {
                             </div>
                             <div className='px-1  w-full md:w-1/2'>
                                 <label htmlFor='bPrice'> Price:</label>
-                                <input {...register("bPrice", { required: true })} type="text" placeholder='Enater the book price' className="focus:border-green-500 w-full bg-transparent p-2 outline-none border rounded my-4" id='bPrice' />
+                                <input {...register("bPrice", { required: true })} type="text" placeholder='Enter the book price' className="focus:border-green-500 w-full bg-transparent p-2 outline-none border rounded my-4" id='bPrice' />
                                 {errors.bPrice && <span className='block text-red-500 mt-[-10px] mb-5'>This field is required</span>}
                             </div>
                         </div>
@@ -97,6 +98,13 @@ function AddBook() {
                         <div className='px-1'>
                                 <label htmlFor='bPrice'> Image Link:</label>
                                 <input {...register("imgLink", { required: true })} type="text" placeholder='Paste here your img link' className="focus:border-green-500 w-full bg-transparent p-2 outline-none border rounded my-4" id='imgLink' />
+                                {errors.imgLink && <span className='block text-red-500 mt-[-10px] mb-5'>This field is required</span>}
+                            </div>
+                        <br />
+
+                        <div className='px-1'>
+                                <label htmlFor='bPrice'> Url Link:</label>
+                                <input {...register("urlLink", { required: true })} type="text" placeholder='Paste here your url link' className="focus:border-green-500 w-full bg-transparent p-2 outline-none border rounded my-4" id='imgLink' />
                                 {errors.imgLink && <span className='block text-red-500 mt-[-10px] mb-5'>This field is required</span>}
                             </div>
                         <br />
